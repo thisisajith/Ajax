@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @obj.name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @obj.desc %>
+</p>
+
+<p>
+  <strong>Updated time:</strong>
+ <span id="updated_at"><%= @obj.updated_at.strftime("%m/%d/%Y %H:%M:%S") %> </span> 
+</p>
+
+
+<%= link_to 'Update', ajax_obj_path(@obj), method: :patch , remote: true		 %> |
+<%= link_to 'Edit', edit_obj_path(@obj) %> |
+<%= link_to 'Back', objs_path %>
